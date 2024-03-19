@@ -45,27 +45,46 @@ component(9);
 component(10);
 component(11);
 
-function hotSection () {
-let hotParent = document.querySelector(".owl-carousel")
-    
-    let hotDiv = createElement('div');
+function hotSection() {
+    let hotDiv = document.createElement('div');
     hotDiv.classList.add("item");
 
-    let hotDiv2 = createElement('div');
+    let hotDiv2 = document.createElement('div');
     hotDiv2.classList.add("box");
 
-    let hotDiv3 = createElement('div');
-hotDiv3.classList.add("img-box");
+    let hotDiv3 = document.createElement('div');
+    hotDiv3.classList.add("img-box");
 
-hotDiv2.appendChild(hotDiv3);
-    
-let hotImg = createElement('img');
-hotImg.src = "images/dish.jpg";
+    hotDiv2.appendChild(hotDiv3);
 
-hotDiv3.appendChild(hotImg);
-hotDiv.appendChild(hotDiv2);
+    let hotImg = document.createElement('img');
+    hotImg.src = "images/dish.jpg";
 
-hotParent.appendChild(hotDiv);
+    hotDiv3.appendChild(hotImg);
+    hotDiv.appendChild(hotDiv2);
+
+    let hotParent = document.querySelector(".owl-carousel")
+    hotParent.appendChild(hotDiv);
+
+    let hotText = document.createElement('div');
+    hotText.classList.add("detail-box");
+
+    hotDiv2.appendChild(hotText);
+
+    let para = document.createElement('h4');
+    para.innerText = "$30";
+
+    let para2 = document.createElement('p');
+    para2.innerText = "There are many variations of passages of Lorem Ipsum available,";
+
+    hotText.appendChild(para);
+    hotText.appendChild(para2);
+
+    let button = document.createElement('a');
+    button.innerText = "Order Now";
+
+    hotText.appendChild(button);
+
 };
 
 hotSection();
