@@ -11,6 +11,8 @@ function component(compoNum) {
 
     let parentOl = document.querySelector(".carousel-indicators");
     parentOl.appendChild(li1);
+    li1.style.color = 'black';
+    li1.style.fontSize = '1.25rem';
 
 
     let div1 = document.createElement('div');
@@ -26,24 +28,33 @@ function component(compoNum) {
 
 
     let img1 = document.createElement('img');
-    img1.src = "images/hot-3.png";
-
+    img1.src = "images/hot-1.png";
 
     div2.appendChild(img1);
 
+    let h1 = document.createElement('h3');
+    h1.classList.add("subtitle");
+    h1.innerHTML = "2nd text";
 
+    div1.appendChild(h1);
+
+    let btnDiv = document.createElement('div');
+    btnDiv.classList.add("btn-box");
+
+    let a = document.createElement('a');
+    a.classList.add("btn-1");
+    a.innerHTML = "Click";
+
+    btnDiv.appendChild(a);
+
+    div1.appendChild(btnDiv);
     let parentDiv = document.querySelector(".carousel-inner");
-    parentDiv.appendChild(div1);
+    parentDiv.appendChild(div1); 
 }
 
 
-component(5);
-component(6);
-component(7);
-component(8);
-component(9);
-component(10);
-component(11);
+component("2ndwebsite");
+
 
 function hotSection() {
     let hotDiv = document.createElement('div');
